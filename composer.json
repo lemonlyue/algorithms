@@ -1,0 +1,10 @@
+{
+    "name": "lemon_lyue/algorithms",
+    "description": "0000000",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Lemonlyue\\Algorithms\\": "./"
+        }
+    }
+}
