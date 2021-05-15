@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 use Lemonlyue\Algorithms\BinaryTree\BinaryTreeSort;
 use Lemonlyue\Algorithms\BinaryTree\Node;
