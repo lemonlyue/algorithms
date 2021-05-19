@@ -25,12 +25,37 @@ class Solution {
     protected $result = [];
 
     /**
+     * 递归
      * @param TreeNode $root
      * @return Integer[][]
      */
     function levelOrder($root) {
         $this->recursive($root);
         return $this->result;
+    }
+
+    /**
+     * 队列
+     * @param $root
+     * @return array
+     */
+    function levelOrder2($root) {
+
+        $res = [];
+        if ($root === null) return $res;
+        $queue = new SplQueue();
+        $queue->enqueue($root);
+        while ($count = $queue->count()) {
+            $currentLevel = [];
+            for ($i = 0; $i < $count; ++$i) {
+                $node = $queue->dequeue();
+                $currentLevel[] = $node->val;
+                if ($node->left !== null) $queue->enqueue($node->left);
+                if ($node->right !== null) $queue->enqueue($node->right);
+            }
+            $res[] = $currentLevel;
+        }
+        return $res;
     }
 
     /**
