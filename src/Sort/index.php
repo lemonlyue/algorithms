@@ -1,6 +1,7 @@
 <?php
 
 use Lemonlyue\Algorithms\Sort\BubbleSort;
+use Lemonlyue\Algorithms\Sort\HeapSort;
 use Lemonlyue\Algorithms\Sort\QuickSort;
 
 require '../../vendor/autoload.php';
@@ -17,4 +18,8 @@ $quick = new QuickSort();
 // 普通
 var_dump($quick->sort($array));
 // 三数取中
-var_dump($quick->sort2($array, 0, count($array)));
+var_dump($quick->sort2($array, 0, count($array) - 1));
+
+// 堆排序
+$heap = new HeapSort();
+var_dump($heap->sort($array));
