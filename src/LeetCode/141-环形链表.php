@@ -31,4 +31,24 @@ class Solution {
         }
         return false;
     }
+    
+    /**
+     * 快慢指针
+     *
+     * @param ListNode $head
+     * @return Boolean
+     */
+    function hasCycle2($head) {
+        $hash = [];
+        $quick = $head->next;
+        $slow = $head;
+        while ($quick && $slow) {
+            if ($quick === $slow) {
+                return true;
+            }
+            $quick = $quick->next->next;
+            $slow = $slow->next;
+        }
+        return false;
+    }
 }
