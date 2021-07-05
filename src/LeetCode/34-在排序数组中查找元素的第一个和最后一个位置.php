@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Class Solution
+ * @link https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+ */
 class Solution {
 
     /**
